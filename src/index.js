@@ -18,13 +18,49 @@ modalShow.addEventListener('click',ShowModal);
 modalClose.addEventListener('click',()=> modalContainer.classList.remove('show-modal'));
 window.addEventListener('click',(e)=>(e.target === modalContainer ? modalContainer.classList.remove('show-modal'):false));
 
+// Validate form
+function validate(nameValue, urlValue){
+    const expression = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/g;    
+    const regex = new RegExp(expression);
+    console.log(regex);
+    // if (urlValue.match(regex)){
+    //     alert('match');
+    // }
+
+
+    if (!nameValue){
+        alert('Please submit Name field');
+        return false;
+    }
+
+    if (!urlValue){
+        alert('Please submit Url field');
+        return false;
+    }
+
+    
+    if (!urlValue.match(regex)){
+        alert('Please provide a valid web address');
+        return false;
+    }
+
+    return true;
+}
+
 
 // Handle Data from Form
 function storeBookmark(e){
     e.preventDefault();
     const nameValue = websiteNameEl.value;
-    const urlValue = websiteUrlEl.value;
+    let urlValue = websiteUrlEl.value;
+    if (urlValue && !urlValue.includes('http://') && !urlValue.includes('https://')){
+        urlValue = `https://${urlValue}`;
+        console.log(urlValue)
+    }
     console.log(nameValue,urlValue);
+    if (!validate(nameValue,urlValue)){
+        return false;
+    }
 }
 
 
