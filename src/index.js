@@ -49,9 +49,13 @@ function validate(nameValue, urlValue){
     return true;
 }
 
+// deleteBookmark = deleteBookmark.bind(this);
+
 // Build Bookmars Form
 function buildBookmarks(){
+    bookmarksContainer.textContent = '';
     bookmarks.forEach((bookmar)=>{
+        
         const {name, url} = bookmar;
         
         const item = document.createElement('div');
