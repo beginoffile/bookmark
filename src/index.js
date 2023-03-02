@@ -51,6 +51,9 @@ function validate(nameValue, urlValue){
 
 // deleteBookmark = deleteBookmark.bind(this);
 
+// let thisdeleteBookmark = deleteBookmark.bind(this);
+window.deleteBookmark = deleteBookmark;
+
 // Build Bookmars Form
 function buildBookmarks(){
     bookmarksContainer.textContent = '';
@@ -64,7 +67,11 @@ function buildBookmarks(){
         const closeIcon = document.createElement('i');
         closeIcon.classList.add('fas','fa-times');
         closeIcon.setAttribute('title','Delete Bookmark');
+console.log('deleteBookmark',deleteBookmark);
         closeIcon.setAttribute('onclick',`deleteBookmark('${url}')`);
+        // closeIcon.addEventListener('click',()=>{
+        //     deleteBookmark(url);
+        // });
 
         const linkInfo = document.createElement('div');
         linkInfo.classList.add('name');
@@ -138,4 +145,6 @@ function storeBookmark(e){
 // Event Listener
 bookmarkForm.addEventListener('submit',storeBookmark);
 
-fetchBookmarks();
+document.addEventListener('DOMContentLoaded', function() {
+    fetchBookmarks();
+ }, false);
