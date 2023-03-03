@@ -105,9 +105,9 @@ module.exports = (env, argv) =>{
         plugins: [
 
             new WebpackPwaManifest({
-                name: 'Nombre de la App',
-                short_name: 'App',
-                description: 'App Template',
+                name: 'Bookmark',
+                short_name: 'Boomark',
+                description: 'Bookmark App',
                 theme_color: '#8C54A4',
                 background_color: '#8C54A4',
                 display: 'standalone',
@@ -244,9 +244,9 @@ module.exports = (env, argv) =>{
         plugins: [
 
             new WebpackPwaManifest({
-                name: 'Nombre de la App',
-                short_name: 'App',
-                description: 'App Template',
+                name: 'Bookmark',
+                short_name: 'Boomark',
+                description: 'Bookmark App',
                 theme_color: '#8C54A4',
                 background_color: '#8C54A4',
                 display: 'standalone',
