@@ -145,21 +145,7 @@ module.exports = (env, argv) =>{
             new CopyPlugin({
                 patterns:[
                     { from: "./src/assets/images", to: "./assets/images" },
-                    { from: "./src/assets/iconos", to: "./assets/iconos" },
-                    {
-                        from: "node_modules/@fortawesome/fontawesome-free/webfonts/*.*",
-                        to() {
-                            return "fortawesome/fontawesome-free/webfonts/[name][ext]";
-                        }
-
-                    },
-                    {
-                        from: "node_modules/@fortawesome/fontawesome-free/css/all.css",
-                        to() {
-                            return "fortawesome/fontawesome-free/css/[name][ext]";
-                        }
-
-                    },                  
+                    { from: "./src/assets/iconos", to: "./assets/iconos" },                                      
                 ]
             }),
 
@@ -296,21 +282,7 @@ module.exports = (env, argv) =>{
             new CopyPlugin({
                 patterns:[
                     { from: "./src/assets/images", to: "./assets/images" },
-                    {
-                        from: "node_modules/@fortawesome/fontawesome-free/webfonts/*.*",
-                        to() {
-                            return "fortawesome/fontawesome-free/webfonts/[name][ext]";
-                        }
-
-                    },
-                    {
-                        from: "node_modules/@fortawesome/fontawesome-free/css/all.css",
-                        to() {
-                            return "fortawesome/fontawesome-free/css/[name][ext]";
-                        }
-
-                    },
-                  
+                    
                 ]
             }),
 
