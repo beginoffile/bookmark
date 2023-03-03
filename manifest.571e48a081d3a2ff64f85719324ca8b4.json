@@ -1,93 +1,93 @@
 {
   "icons": [
     {
-      "src": "./icon_512x512.7ced942e72725b30763a519fcbf68824.png",
+      "src": "./icon_512x512.805ed93026bb66cc9112c596a10a8f4f.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "./icons/android/icon_512x512.7ced942e72725b30763a519fcbf68824.png",
+      "src": "./icons/android/icon_512x512.805ed93026bb66cc9112c596a10a8f4f.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "./icons/android/icon_384x384.17d24a912907666f649c3a89bda9eae4.png",
+      "src": "./icons/android/icon_384x384.09d06b7bad97bfdff0ecee096b3a175b.png",
       "sizes": "384x384",
       "type": "image/png"
     },
     {
-      "src": "./icons/android/icon_256x256.c7bad86694e4c637db86e3da8099f8ec.png",
+      "src": "./icons/android/icon_256x256.ea7be8933610fa49a058c63616e3ebd8.png",
       "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "./icons/android/icon_512x512.7ced942e72725b30763a519fcbf68824.png",
+      "src": "./icons/android/icon_512x512.805ed93026bb66cc9112c596a10a8f4f.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "./icons/android/icon_192x192.d05ed61ad714d64339ae46fb75a9c6a3.png",
+      "src": "./icons/android/icon_192x192.1fcbdf143eb671ec6c05fda8bf5d44c1.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "./icons/android/icon_144x144.d21c0736fc06cc67e6d553e115bbc611.png",
+      "src": "./icons/android/icon_144x144.55eb5e1f959fd02e1bb7cba018cd2bd2.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "./icons/android/icon_128x128.e39bc7ed7eb16ddfb6c761c8708f2d26.png",
+      "src": "./icons/android/icon_128x128.46bc0ecca05a3edc9f794a7908a1f218.png",
       "sizes": "128x128",
       "type": "image/png"
     },
     {
-      "src": "./icons/android/icon_96x96.d69102c2569ecd2104b82f0119802e86.png",
+      "src": "./icons/android/icon_96x96.74002f560853358f2cda41e61798bb9f.png",
       "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "./icons/android/icon_72x72.13050a752b7cd577a61b449f5ad39736.png",
+      "src": "./icons/android/icon_72x72.a726f88a2d49fa503950a04a074f946c.png",
       "sizes": "72x72",
       "type": "image/png"
     },
     {
-      "src": "./icons/android/icon_48x48.593f0f67f7a998253392bbf6a770cd44.png",
+      "src": "./icons/android/icon_48x48.dc55f4bcd8db927d91bc927db6b225ac.png",
       "sizes": "48x48",
       "type": "image/png"
     },
     {
-      "src": "./icons/android/icon_36x36.34914e304c6670126cd1c09fb51828bb.png",
+      "src": "./icons/android/icon_36x36.a3a64595cd43c8de742a2f83a4d653d1.png",
       "sizes": "36x36",
       "type": "image/png"
     },
     {
-      "src": "./icons/ios/icon_1024x1024.6d5c02af09d5d010273ff588efdbb85e.png",
+      "src": "./icons/ios/icon_1024x1024.15dc315da9ee7795c69e6b5682925007.png",
       "sizes": "1024x1024",
       "type": "image/png"
     },
     {
-      "src": "./icons/ios/icon_1024x1024.6d5c02af09d5d010273ff588efdbb85e.png",
+      "src": "./icons/ios/icon_1024x1024.15dc315da9ee7795c69e6b5682925007.png",
       "sizes": "1024x1024",
       "type": "image/png"
     },
     {
-      "src": "./icons/ios/icon_180x180.d92112e513017b4e0344fb77b20eefa2.png",
+      "src": "./icons/ios/icon_180x180.f55dd1824d00f5bfa9a7e8275662c86c.png",
       "sizes": "180x180",
       "type": "image/png"
     },
     {
-      "src": "./icons/ios/icon_167x167.fed0ce7cd4bb18a458f1ed865be566e4.png",
+      "src": "./icons/ios/icon_167x167.4f5f997a06c25106c1dbb6f7d4e7ed7f.png",
       "sizes": "167x167",
       "type": "image/png"
     },
     {
-      "src": "./icons/ios/icon_152x152.f6220dcd0de815831d5132db37795986.png",
+      "src": "./icons/ios/icon_152x152.f8a0ffd77100567ee740b2053fcbc18a.png",
       "sizes": "152x152",
       "type": "image/png"
     },
     {
-      "src": "./icons/ios/icon_120x120.65f0b4fe3785c1fa94ed7029002de1cb.png",
+      "src": "./icons/ios/icon_120x120.767ad8a9ff910980912ea3d3671ae5e3.png",
       "sizes": "120x120",
       "type": "image/png"
     }
