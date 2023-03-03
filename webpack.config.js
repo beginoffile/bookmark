@@ -114,17 +114,35 @@ module.exports = (env, argv) =>{
                 dir:'',
                 inject:true,
                 start_url: '.',
-                publicPath: '.',                
+                publicPath: '.',
                 includeDirectory: false,
                 fingerprints: true,
-                crossorigin: null,                
+                crossorigin: null,    
+                ios:true,                            
                 // crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
                 icons: [
-                  {
-                    src: path.resolve('src/assets/iconos/javascript.png'),
-                    sizes: [72, 96, 128, 144, 152, 192, 384, 512] // multiple sizes
-                  },
-                 
+                    {
+                        src: path.resolve('src/assets/iconos/bookmark.png'),
+                        sizes: [120, 152, 167, 180, 1024],
+                        destination: path.join('icons', 'ios'),
+                        ios: true
+                    },
+                    {
+                    src: path.resolve('src/assets/iconos/bookmark.png'),
+                    size: 1024,
+                    destination: path.join('icons', 'ios'),
+                    ios: 'startup'
+                    },
+                    {
+                    src: path.resolve('src/assets/iconos/bookmark.png'),
+                    sizes: [36, 48, 72, 96, 128, 144, 192, 512, 256, 384, 512],
+                    destination: path.join('icons', 'android')
+                    },                  
+                    {
+                    src: path.resolve('src/assets/iconos/bookmark.png'),
+                    size: '512x512',
+                    purpose: 'maskable'
+                    }                 
                 ]
               }),
 
@@ -132,7 +150,7 @@ module.exports = (env, argv) =>{
                 title: 'Mi Webpack App',
                 //filename: "index.html", // output file
                 template: './src/index.html',
-                favicon: './src/assets/iconos/javascript.png'
+                favicon: './src/assets/iconos/bookmark.png'
             }),
 
             
@@ -253,16 +271,35 @@ module.exports = (env, argv) =>{
                 dir:'',
                 inject:true,
                 start_url: '.',
-                publicPath: '.',                
+                publicPath: '.',
                 includeDirectory: false,
                 fingerprints: true,
-                crossorigin: null,                
+                crossorigin: null,     
+                ios:true,                
                 // crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
                 icons: [
                   {
-                    src: path.resolve('src/assets/iconos/javascript.png'),
-                    sizes: [72, 96, 128, 144, 152, 192, 384, 512] // multiple sizes
+                    src: path.resolve('src/assets/iconos/bookmark.png'),
+                    sizes: [120, 152, 167, 180, 1024],
+                    destination: path.join('icons', 'ios'),
+                    ios: true
                   },
+                  {
+                    src: path.resolve('src/assets/iconos/bookmark.png'),
+                    size: 1024,
+                    destination: path.join('icons', 'ios'),
+                    ios: 'startup'
+                  },
+                  {
+                    src: path.resolve('src/assets/iconos/bookmark.png'),
+                    sizes: [36, 48, 72, 96, 128, 144, 192, 512, 256, 384, 512],
+                    destination: path.join('icons', 'android')
+                  },                  
+                  {
+                    src: path.resolve('src/assets/iconos/bookmark.png'),
+                    size: '512x512',
+                    purpose: 'maskable'
+                  }                 
                  
                 ]
             }),
@@ -271,7 +308,7 @@ module.exports = (env, argv) =>{
                 title: 'Mi Webpack App',
                 // filename: 'index.html',
                 template: './src/index.html',
-                favicon: './src/assets/iconos/javascript.png'                
+                favicon: './src/assets/iconos/bookmark.png'                
             }),            
             
             new MiniCssExtractPlugin({
