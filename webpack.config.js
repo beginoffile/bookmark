@@ -150,7 +150,7 @@ module.exports = (env, argv) =>{
                 title: 'Mi Webpack App',
                 //filename: "index.html", // output file
                 template: './src/index.html',
-                favicon: './src/assets/iconos/bookmark.png'
+                favicon: './src/assets/iconos/bookmarkicon.png'
             }),
 
             
@@ -308,7 +308,7 @@ module.exports = (env, argv) =>{
                 title: 'Mi Webpack App',
                 // filename: 'index.html',
                 template: './src/index.html',
-                favicon: './src/assets/iconos/bookmark.png'                
+                favicon: './src/assets/iconos/bookmarkicon.png'                
             }),            
             
             new MiniCssExtractPlugin({
