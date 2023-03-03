@@ -8,7 +8,7 @@ const websiteNameEl = document.getElementById('website-name');
 const websiteUrlEl = document.getElementById('website-url');
 const bookmarksContainer = document.getElementById('bookmarks-container');
 
-let bookmarks = [];
+let bookmarks = {};
 
 
 function ShowModal(){
@@ -24,7 +24,7 @@ window.addEventListener('click',(e)=>(e.target === modalContainer ? modalContain
 function validate(nameValue, urlValue){
     const expression = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/g;    
     const regex = new RegExp(expression);
-    console.log(regex);
+    
     // if (urlValue.match(regex)){
     //     alert('match');
     // }
@@ -57,9 +57,10 @@ window.deleteBookmark = deleteBookmark;
 // Build Bookmars Form
 function buildBookmarks(){
     bookmarksContainer.textContent = '';
-    bookmarks.forEach((bookmar)=>{
+    
+    Object.keys(bookmarks).forEach((id) => {
         
-        const {name, url} = bookmar;
+        const {name, url} = bookmarks[id];
         
         const item = document.createElement('div');
         item.classList.add('item');
@@ -67,8 +68,8 @@ function buildBookmarks(){
         const closeIcon = document.createElement('i');
         closeIcon.classList.add('fas','fa-times');
         closeIcon.setAttribute('title','Delete Bookmark');
-console.log('deleteBookmark',deleteBookmark);
-        closeIcon.setAttribute('onclick',`deleteBookmark('${url}')`);
+
+        closeIcon.setAttribute('onclick',`deleteBookmark('${id}')`);
         // closeIcon.addEventListener('click',()=>{
         //     deleteBookmark(url);
         // });
@@ -100,12 +101,12 @@ function fetchBookmarks(e){
     buildBookmarks();
 }
 
-function deleteBookmark(url){
-    bookmarks.forEach((bookmark,i)=>{
-        if (bookmark.url ===url){
-            bookmarks.splice(i,1);
-        }
-    })
+function deleteBookmark(id){
+
+    if (bookmarks[id]) {
+		delete bookmarks[id]
+	}
+    
     localStorage.setItem('bookmarks',JSON.stringify(bookmarks));
     fetchBookmarks();
 }
@@ -118,7 +119,7 @@ function storeBookmark(e){
     let urlValue = websiteUrlEl.value;
     if (urlValue && !urlValue.includes('http://') && !urlValue.includes('https://')){
         urlValue = `https://${urlValue}`;
-        console.log(urlValue)
+        
     }
     
     if (!validate(nameValue,urlValue)){
@@ -129,12 +130,12 @@ function storeBookmark(e){
         name: nameValue,
         url: urlValue,
     };
-
-    bookmarks.push(bookmark);
+    
+    bookmarks[urlValue] = bookmark;
     localStorage.setItem('bookmarks',JSON.stringify(bookmarks));
     buildBookmarks();
 
-    console.log(bookmarks);
+    
     bookmarkForm.reset();
     websiteNameEl.focus();
 
