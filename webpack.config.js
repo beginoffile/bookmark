@@ -5,6 +5,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
+const WorkboxPlugin = require('workbox-webpack-plugin');
    
 module.exports = (env, argv) =>{
     
@@ -112,8 +113,8 @@ module.exports = (env, argv) =>{
                 display: 'standalone',
                 dir:'',
                 inject:true,
-                start_url: '/',
-                publicPath: '/',                
+                start_url: './',
+                publicPath: './',                
                 includeDirectory: false,
                 fingerprints: true,
                 crossorigin: null,                
@@ -160,6 +161,11 @@ module.exports = (env, argv) =>{
 
                     },                  
                 ]
+            }),
+
+            new WorkboxPlugin.GenerateSW({
+                clientsClaim:true,
+                skipWaiting:true
             }),
 
            
@@ -260,8 +266,8 @@ module.exports = (env, argv) =>{
                 display: 'standalone',
                 dir:'',
                 inject:true,
-                start_url: '/',
-                publicPath: '/',                
+                start_url: './',
+                publicPath: './',                
                 includeDirectory: false,
                 fingerprints: true,
                 crossorigin: null,                
@@ -306,7 +312,12 @@ module.exports = (env, argv) =>{
                     },
                   
                 ]
-            })
+            }),
+
+            new WorkboxPlugin.GenerateSW({
+                clientsClaim:true,
+                skipWaiting:true
+            }),
             
         ]
     }
