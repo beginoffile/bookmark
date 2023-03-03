@@ -1,4 +1,5 @@
 import './styles.css';
+import './sw.js';
 
 const modalContainer = document.getElementById('modal-container');
 const modalShow = document.getElementById('show-modal');
